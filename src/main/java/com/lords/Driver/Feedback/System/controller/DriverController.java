@@ -14,7 +14,7 @@ public class DriverController {
     private DriverService service;
 
     @GetMapping("/DriverDetails")
-   // @CrossOrigin(origins = "http://localhost")
+    @CrossOrigin(origins = "http://localhost")
     public List<Driver> getDriverDetails(){
         return service.getDriverDetails();
     }
@@ -35,7 +35,7 @@ public class DriverController {
         service.updateDriver(driver);
     }
     @DeleteMapping("/DriverDetails/{deleteDriver}")
-    //@CrossOrigin(origins = "http://localhost")
+    @CrossOrigin(origins = "http://localhost")
     public void deleteDriver( @PathVariable int deleteDriver){
         service.deleteDriver(deleteDriver);
     }
