@@ -8,13 +8,11 @@ import org.springframework.stereotype.Component;
 public class ServerPortCustomizer implements WebServerFactoryCustomizer<ConfigurableServletWebServerFactory> {
     @Override
     public void customize(ConfigurableServletWebServerFactory factory) {
-        String port = System.getenv("X_ZOHO_CATALYST_LISTEN_PORT");
-        int listenPort;
-        if(port != null && !port.isEmpty()) {
-            listenPort = Integer.parseInt(System.getenv("X_ZOHO_CATALYST_LISTEN_PORT"));
+        String port = System.getenv("PORT");
+        if (port != null && !port.isEmpty()) {
+            factory.setPort(Integer.parseInt(port));
         } else {
-            listenPort = 9000;
+            factory.setPort(8080); // Default port if PORT env variable is not set
         }
-        factory.setPort(listenPort);
     }
 }
