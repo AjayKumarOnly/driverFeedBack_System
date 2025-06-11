@@ -1,0 +1,19 @@
+{
+    "name": "driver-feedback-system",
+    "type": "java",
+    "build": {
+        "buildCommand": "./mvnw clean package",
+        "outputDir": "target",
+        "outputFile": "Driver-Feedback-System-0.0.1-SNAPSHOT.jar"
+    },
+    "runtime": {
+        "javaVersion": "21"
+    },
+    "env": {
+        "SPRING_DATASOURCE_URL": "jdbc:mysql://bi4rfojulybzxvwa7uvn-mysql.services.clever-cloud.com:3306/bi4rfojulybzxvwa7uvn",
+        "SPRING_DATASOURCE_USERNAME": "uibldssriu2c73wh",
+        "SPRING_DATASOURCE_PASSWORD": "eLv3nmMIJVNtJTdTnHwZ",
+        "SPRING_JPA_HIBERNATE_DDL_AUTO": "update",
+        "SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT": "org.hibernate.dialect.MySQLDialect"
+    }
+} 
